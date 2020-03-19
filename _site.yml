@@ -1,12 +1,8 @@
-name: "test-website"
+name: "my-website"
 navbar:
-  title: "Test Website"
+  title: "My Website"
   left:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
-output:
-  html_document:
-    theme: flatly
-    highlight: textmate
