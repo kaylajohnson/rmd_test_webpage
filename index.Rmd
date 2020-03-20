@@ -7,11 +7,14 @@ output: html_document
 library(DT)
 library(tidyverse)
 
-gn <- read_delim("./_data/2020-03-19_gtex_naive_results.txt",
-                 delim = "\t", col_names = T)
+gn <- tibble(project = rep("SRP012682", 104),
+             method = rep(LETTERS, 4),
+             tissue = rep(c("brain", "heart", "lung", "kidney"), 26),
+             log2_auprc_prior = runif(104),
+             auroc = runif(104))
 ```
 
-```{r}
+```{r echo=FALSE}
 datatable(gn, rownames = FALSE, filter="top", options = list(pageLength = 25, scrollX=T))
 ```
 
