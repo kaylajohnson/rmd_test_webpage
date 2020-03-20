@@ -42,7 +42,7 @@ content of sub-chapter #3
 
 # new section
 
-![A caption for this plot](./_plots/p3.png){ width=50% }
+![A caption for this plot](./plots/p3.png){ width=50% }
 
 
 
