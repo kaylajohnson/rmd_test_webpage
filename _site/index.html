@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>home</title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.12/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
+<script src="site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="site_libs/selectize-0.12.0/selectize.min.js"></script>
+<link href="site_libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">My Website</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">home</h1>
+
+</div>
+
+
+<div id="htmlwidget-f582b047c3730d4b523c" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f582b047c3730d4b523c">{"x":{"filter":"top","filterHTML":"<tr>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0.007079317234456\" data-max=\"0.989395085256547\" data-scale=\"15\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0.008085993584245\" data-max=\"0.999714185483754\" data-scale=\"15\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","data":[["SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682","SRP012682"],["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],["brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney","brain","heart","lung","kidney"],[0.952381333801895,0.250204470241442,0.216532689519227,0.352324896957725,0.386253230506554,0.102461317554116,0.798802303615957,0.257833223091438,0.00707931723445654,0.670917691895738,0.225548309274018,0.530680410563946,0.850808047456667,0.303372650407255,0.108566076494753,0.952702521812171,0.412254676688462,0.229689882835373,0.807367302011698,0.811937083024532,0.40013328101486,0.8070765202865,0.143358282744884,0.391176313860342,0.628950615413487,0.319942495785654,0.652489273110405,0.578274310333654,0.242256475379691,0.949365446576849,0.360029412899166,0.450364287011325,0.842487818328664,0.12444439297542,0.93355533410795,0.982121072942391,0.834946226794273,0.0590638758148998,0.417454644106328,0.967341848183423,0.899506788235158,0.897456126753241,0.374876604182646,0.0715094830375165,0.225432856939733,0.420936831273139,0.308050182415172,0.239072484662756,0.976561027113348,0.487031729659066,0.547349552391097,0.317940938519314,0.0817609855439514,0.51055178209208,0.75301352981478,0.111585386795923,0.287644253345206,0.664744175039232,0.967813512543216,0.632910129148513,0.628355947323143,0.406532897846773,0.945887177251279,0.207482309546322,0.071563903009519,0.261049693915993,0.252931295661256,0.712888353504241,0.701775425579399,0.233267113799229,0.0187748952303082,0.341342271305621,0.11285153334029,0.629582587862387,0.273795173270628,0.0234756737481803,0.23675006814301,0.501877002650872,0.375930757727474,0.532467500073835,0.277114043245092,0.951240806374699,0.914089815458283,0.733956236159429,0.552310597151518,0.12779547017999,0.13424216513522,0.446559268748388,0.989395085256547,0.946691557066515,0.911125226644799,0.94116125209257,0.25893021770753,0.390154265798628,0.745537709910423,0.0927413546014577,0.941326712025329,0.266239653807133,0.212075082585216,0.807202350813895,0.0338284578174353,0.0214035480748862,0.0945569616742432,0.862751408712938],[0.0400235797278583,0.190975739154965,0.0442236000671983,0.891130598727614,0.615743545815349,0.35855409107171,0.740727325901389,0.319336060201749,0.0211472611408681,0.407485821051523,0.563770908862352,0.810742553556338,0.0510458895005286,0.0131210752297193,0.439551957184449,0.236456305719912,0.527946744579822,0.0185995064675808,0.967645157128572,0.180562780238688,0.138441668823361,0.563006062991917,0.314655582420528,0.628953603096306,0.826983184786513,0.842918749898672,0.475261162733659,0.514376665465534,0.087822440546006,0.454465814633295,0.365758040221408,0.656950095435604,0.255070557584986,0.937812248244882,0.39706700714305,0.083140020724386,0.686156213982031,0.751853675581515,0.233538841828704,0.96476057334803,0.679091330850497,0.700139364227653,0.617358107119799,0.500944732921198,0.361130669945851,0.940892771119252,0.961077573010698,0.385161643382162,0.527756295865402,0.923971180804074,0.427884695352986,0.802465689834207,0.113817109726369,0.686046921415254,0.208252130774781,0.989317334489897,0.598769442178309,0.157352311303839,0.479919690638781,0.437352879904211,0.302649934776127,0.218328406335786,0.231746105244383,0.428291194606572,0.34748918004334,0.999714185483754,0.372188688488677,0.410433974815533,0.645888450788334,0.279508793493733,0.655760633759201,0.112905066926032,0.0396256614476442,0.20173245924525,0.718895178753883,0.368768499465659,0.510673333425075,0.729568185284734,0.145503123756498,0.00808599358424544,0.504575948696584,0.865430369274691,0.259273341624066,0.119583232095465,0.492338940268382,0.369633721886203,0.434660171391442,0.3555881252978,0.325363153358921,0.393398230429739,0.0402053443249315,0.721507970942184,0.908850657753646,0.829400081653148,0.605987306917086,0.443068426800892,0.0319790299981833,0.782743433024734,0.998619500314817,0.792869102908298,0.565894074272364,0.926252863835543,0.664167370647192,0.835846723755822]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>project<\/th>\n      <th>method<\/th>\n      <th>tissue<\/th>\n      <th>log2_auprc_prior<\/th>\n      <th>auroc<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":25,"scrollX":true,"columnDefs":[{"className":"dt-right","targets":[3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
