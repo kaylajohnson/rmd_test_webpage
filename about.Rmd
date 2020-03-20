@@ -13,7 +13,8 @@ mpg %>%
   ggplot( aes(x=reorder(class, hwy), y=hwy, fill=class)) + 
     geom_boxplot() +
     xlab("class") +
-  theme_minimal() 
+  theme_minimal() +
+  guides(fill=F)
 ```
 
 <style>
@@ -37,3 +38,11 @@ content of sub-chapter #2
 
 ## Third
 content of sub-chapter #3
+***
+
+# new section
+
+![A caption for this plot](./_plots/p3.png){ width=50% }
+
+
+
