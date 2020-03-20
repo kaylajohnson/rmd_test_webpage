@@ -1,6 +1,7 @@
 name: "my-website"
 navbar:
-  logo: ./norm_for_rnaseq_logo.png
+  logo: 
+    image: ./norm_for_rnaseq_logo.png
   left:
     - text: "Home"
       href: index.html
